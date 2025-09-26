@@ -271,7 +271,7 @@ Module.register("birthdaylist", {
 										displayDate = "";
 									}
 									var bodyTR = this.createEl('tr', null, isToday ? "TR-TODAY" : "TR-BODY",tBody, null);
-									var imageTD = this.createEl('td', null, "TD-IMAGE".concat(this.config.withMonth?"_withmonth":''), bodyTR, displayDate ? this.getBD_DAY_from_Date(displayDate, this.config.withMonth) : "");
+									this.createEl('td', null, "TD-IMAGE".concat(this.config.withMonth?"_withmonth":''), bodyTR, displayDate ? this.getBD_DAY_from_Date(displayDate, this.config.withMonth) : "");
 									var nameTD = this.createEl('td', null, isToday ? "TD-BODY_TODAY" : "TD-BODY" , bodyTR, person.name + daysUntilText);
 									if (this.config.showAge && !birthday.includes('no_birthdays')) {
 										var spanTDo = this.createEl("td", null, isToday ? "TD-AGE_TODAY" : "TD-AGE", bodyTR, ageInfo );
@@ -282,7 +282,7 @@ Module.register("birthdaylist", {
 								}
 								else {
 									this.createEl('br', null , null , nameTD, null);
-									var nameTD1 = this.createEl('span', null, isToday ? "TD-BODY_TODAY" : "TD-SAME" ,nameTD, person.name + daysUntilText);
+									this.createEl('span', null, isToday ? "TD-BODY_TODAY" : "TD-SAME" ,nameTD, person.name + daysUntilText);
 									if (this.config.showAge && !birthday.includes('no_birthdays')) {
 										this.createEl('br', null , null , spanTDo, null);
 									}
@@ -295,7 +295,7 @@ Module.register("birthdaylist", {
 				}
 				if(counter == 0){
 					var bodyTR = this.createEl('tr', null, "TR-BODY",tBody, null);
-					var nameTD1 = this.createEl('span', null, "TD-SAME",bodyTR, this.translate("NONE"));
+					this.createEl('span', null, "TD-SAME",bodyTR, this.translate("NONE"));
 				}
 			}
 		}
