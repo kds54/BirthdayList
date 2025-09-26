@@ -1,7 +1,7 @@
 install
 
 cd ~/MagicMirror/modules <br>
-git clone https://github.com/sdetweil/birthdaylist <br>
+git clone https://github.com/kds54/birthdaylist <br>
 cd birthdaylist <br>
 npm install<br>
 
@@ -10,13 +10,11 @@ reads from bdl.csv in the module data folder, sample provided
 
 2 columns
 
-birthday , name <br>
-07/21/76  , Fred
+birthday,name <br>
+21/07/76,Fred
 
 
-birthday can be any form of  mm/dd/yyyy or yyyy/mm/dd <br>
-using any separator <br>
-(all the same format) <br>
+birthday must be in the form of  dd/mm/yyyy<br>
 
 u can set colors in CSS. <br>
 sample provided in bdl.css
@@ -52,3 +50,4 @@ config  params, and defaults
 if no birthdays are found to display a message will be shown 
 
 no birthdays in range to display
+
